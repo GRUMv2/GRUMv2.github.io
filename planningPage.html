@@ -4,6 +4,7 @@
         <title>Planning</title>
         <link rel="icon" type="image/x-icon" href="./assets/favicon.ico">
         <link rel="stylesheet" href="./style.css">
+        <script src="myscripts.js"></script>
     </head>
     <body>
         <div id="pagecolumn">
@@ -13,32 +14,61 @@
             </div>
             <div id="snapshots" class="biggusdivvus">
                 <h1>Weekly Snapshots</h1>
-                <br>
-                <table>
-                   <tbody>
-                    <tr>
-                        <th>Week 1</th>
-                        <th>Introduction, no snapshot</th>
-                    </tr>
-                    <tr>
-                        <th>Week 2</th>
-                        <img src="./assets/week2Snapshot.png" alt="assets/favicons.png">
-                    </tr>
-                    <tr>
-                        <th>Week 3</th>
-                        <img src="./assets/week3Snapshot.png" alt="assets/favicons.png">
-                    </tr>
-                    <tr>
-                        <th>Week 4</th>
-                        <img src="./assets/week4Snapshot.png" alt="assets/favicons.png">
-                    </tr>
-                    <tr>
-                        <th>Week 5</th>
-                        <img src="./assets/week5Snapshot.png" alt="assets/favicons.png">
-                    </tr>
-                   </tbody> 
-                </table>
-                </br>
+                <h2>Click on image for slideshow!</h2>
+                <div class="row">
+                    <div class="column">
+                        <img src="assets/week2Snapshot.png" onclick="openModal();currentSlide(1)" class="hover-shadow">
+                      </div>
+                      <div class="column">
+                        <img src="assets/week3Snapshot.png" onclick="openModal();currentSlide(2)" class="hover-shadow">
+                      </div>
+                      <div class="column">
+                        <img src="assets/week4Snapshot.png" onclick="openModal();currentSlide(3)" class="hover-shadow">
+                      </div>
+                      <div class="column">
+                        <img src="assets/week5Snapshot.png" onclick="openModal();currentSlide(4)" class="hover-shadow">
+                      </div>
+                      <div class="column">
+                        <img src="assets/week6Snapshot.png" onclick="openModal();currentSlide(5)" class="hover-shadow">
+                      </div>
+                    </div>
+                </div>
+                <div id="myModal" class="modal">
+                    <span class="close cursor" onclick="closeModal()">&times;</span>
+                    <div class="modal-content">
+                      <div class="mySlides">
+                        <div class="numbertext">1 / 5</div>
+                        <img src="assets/week2Snapshot.png" style="width:100%" alt="Week 2">
+                      </div>
+                  
+                      <div class="mySlides">
+                        <div class="numbertext">2 / 5</div>
+                        <img src="assets/week3Snapshot.png" style="width:100%" alt="Week 3">
+                      </div>
+                  
+                      <div class="mySlides">
+                        <div class="numbertext">3 / 5</div>
+                        <img src="assets/week4Snapshot.png" style="width:100%" alt="Week 4">
+                      </div>
+                  
+                      <div class="mySlides">
+                        <div class="numbertext">4 / 5</div>
+                        <img src="assets/week5Snapshot.png" style="width:100%" alt="Week 5">
+                      </div>
+
+                      <div class="mySlides">
+                        <div class="numbertext">5 / 5</div>
+                        <img src="assets/week6Snapshot.png" style="width:100%" alt="Week 6">
+                      </div>
+
+                      <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+                      <a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+                      <div class="caption-container">
+                        <p id="caption"></p>
+                      </div>
+                    </div>
+                </div>
             </div>
         </div>
     </body>
