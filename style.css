@@ -113,15 +113,15 @@ tr, td, th {
   }
   
   .row:after {
-    content: "";
-    display: table;
-    clear: both;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
   }
   
   .column {
     float: left;
     width: 20%; 
-    clear: both;
+    clear: both;    
   }
   
   .modal {
@@ -196,11 +196,13 @@ tr, td, th {
   }
 
   .col img {
-    max-width: 100%;
     height: auto;
+    width: 60%;
   }
 
   .col {
-    width: 60%;
     padding: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
